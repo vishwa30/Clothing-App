@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and JSON Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .image-preview {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .image-preview img {
+            max-width: 100%;
+            height: auto;
+        }
+        .json-output {
+            margin-top: 30px;
+            background: #eef;
+            padding: 15px;
+            border-radius: 8px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Image and View JSON</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="image-input" name="file" accept="image/*" required><br><br>
+            <button type="submit">Upload</button>
+        </form>
+
+        <div class="image-preview" id="image-preview"></div>
+        <div class="json-output" id="json-output"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('upload-form');
+        const imagePreview = document.getElementById('image-preview');
+        const jsonOutput = document.getElementById('json-output');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const fileInput = document.getElementById('image-input');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            // Show image
+            const reader = new FileReader();
+            reader.onload = () => {
+                imagePreview.innerHTML = `<img src="${reader.result}" alt="Uploaded Image">`;
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+
+            // Show JSON
+            jsonOutput.textContent = JSON.stringify(result, null, 2);
+        });
+    </script>
+</body>
+</html>
