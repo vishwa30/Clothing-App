@@ -10,36 +10,33 @@ Input will always be a wearable clothing. Focus on the primary clothing and igno
 
 Very Imp - Do Not change the above 7 json key names. Send the json key and the results in Title case.
 
-Below are the accepted colour and pattern type and subtypes, please answer in subtypes i.e if colour is light blue then instead of blue answer light blue. Similarly for pattern, 
+Below are the accepted categories values, please answer in subtypes i.e if colour is light blue then instead of blue answer light blue. Similarly for pattern, 
 if a pattern is diamonds then answer diamonds rather than argyle. Try to be as precise as possible like for a light blue colour don't just answer blue rather answer light blue.
 
-And most importantly, if you are not clear with the answer, then answer "Not Clear".
+Below are the categories values, try to answer within this values.
 
-{
-  "colors": {
-    "Black": ["black"],
-    "Blue": ["blue", "lt blue", "light blue"],
-    "Tan": ["tan", "bronze", "tan/khaki/cre", "khaki/tan", "DarkKhaki", "light tan", "light khaki"],
-    "Brown": ["brown", "brown dark", "brown light", "rust"],
-    "Charcoal": ["charcoal", "gray charcoal"],
-    "Yellow": ["yellow", "gold", "mustard"],
-    "Grey": ["grey", "gray light", "gray", "silver", "dark gray", "light gray", "dark grey", "light grey"],
-    "Green": ["green", "green-dark", "green-light", "olive", "lime", "mint", "forest green", "dark green", "light green", "forestgree", "forest green"],
-    "Beige": ["beige", "ivory", "khaki", "creme", "cream"],
-    "Red": ["red", "burgundy", "burgandy", "maroon"],
-    "Navy": ["navy", "dark blue", "navy blue"],
-    "Orange": ["orange", "peach", "burnt orange", "coral", "light coral", "coral light"],
-    "Pink": ["pink", "hot pink", " pink", "salmon", "pnk", "light pink", "dark pink"],
-    "Purple": ["purple", "lavender", "lilac", "violet", "plum", "eggplant", "grape", "dark purple", "light purple", "magenta"],
-    "Turquoise": ["turquoise", "turqois", "turqoise", "aqua", "teal", "aquamarine"],
-    "White": ["white", "off white"],
-    "Black | Blue | Tan | Brown | Charcoal | Yellow | Grey | Green | Beige | Red | Navy | Orange | Pink | Purple | Turquoise | White": ["multi-colored", "multi colored", "multiple colors", "multi-color"]
-    }
-}
+"Colors": {
+  "Black": ["black"],
+  "Blue": ["blue", "lt blue", "light blue"],
+  "Tan": ["tan", "bronze", "tan/khaki/cre", "khaki/tan", "DarkKhaki", "light tan", "light khaki"],
+  "Brown": ["brown", "brown dark", "brown light", "rust"],
+  "Charcoal": ["charcoal", "gray charcoal"],
+  "Yellow": ["yellow", "gold", "mustard"],
+  "Grey": ["grey", "gray light", "gray", "silver", "dark gray", "light gray", "dark grey", "light grey"],
+  "Green": ["green", "green-dark", "green-light", "olive", "lime", "mint", "forest green", "dark green", "light green", "forestgree", "forest green"],
+  "Beige": ["beige", "ivory", "khaki", "creme", "cream"],
+  "Red": ["red", "burgundy", "burgandy", "maroon"],
+  "Navy": ["navy", "dark blue", "navy blue"],
+  "Orange": ["orange", "peach", "burnt orange", "coral", "light coral", "coral light"],
+  "Pink": ["pink", "hot pink", " pink", "salmon", "pnk", "light pink", "dark pink"],
+  "Purple": ["purple", "lavender", "lilac", "violet", "plum", "eggplant", "grape", "dark purple", "light purple", "magenta"],
+  "Turquoise": ["turquoise", "turqois", "turqoise", "aqua", "teal", "aquamarine"],
+  "White": ["white", "off white"],
+  "Black | Blue | Tan | Brown | Charcoal | Yellow | Grey | Green | Beige | Red | Navy | Orange | Pink | Purple | Turquoise | White": ["multi-colored", "multi colored", "multiple colors", "multi-color"]
+  }
 
-Patterns:
-{
-  "patterns": {
+
+"Patterns": {
     "Argyle": ["argyle", "diamonds", "diamond"],
     "Crochet": ["crochet"],
     "Houndstooth": ["houndstooth"],
@@ -57,4 +54,11 @@ Patterns:
     "Tie Dye": ["tie dye", "tyedye"],
     "Animal Print": ["animal print", "animal", "animalprt"]
     }
-}
+
+"Pattern": [
+  Solid,Gingham,Houndstooth,Floral,Printed,Herringbone,Plaid,Embroidered,Dotted,Animal Print,Striped,Pinstripe
+]
+
+"Fabric": [
+  "Cotton", "Wool", "Lyocell", "Triacetate", "Polyester", "Cashmere", "Nylon", "Silk", "Acrylic", "Rayon", "Viscose", "Linen", "Tencel", "Angora", "Acetate"
+  ]
