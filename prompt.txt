@@ -56,7 +56,7 @@ Below are the categories values, try to answer within this values.
     }
 
 "Pattern": [
-  Solid,Gingham,Houndstooth,Floral,Printed,Herringbone,Plaid,Embroidered,Dotted,Animal Print,Striped,Pinstripe
+  "Solid", "Gingham", "Houndstooth", "Floral", "Printed", "Herringbone", "Plaid", "Embroidered", "Dotted", "Animal Print", "Striped", "Pinstripe"
 ]
 
 "Fabric": [
