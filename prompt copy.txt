@@ -13,9 +13,7 @@ Very Imp - Do Not change the above 7 json key names. Send the json key and the r
 Below are the accepted colour and pattern type and subtypes, please answer in subtypes i.e if colour is light blue then instead of blue answer light blue. Similarly for pattern, 
 if a pattern is diamonds then answer diamonds rather than argyle. Try to be as precise as possible like for a light blue colour don't just answer blue rather answer light blue.
 
-Below are the categories values for 4 out of 7 categories, try to answer within these values.
-
-I observed that you are incorrectly answering many Sweater type images as Shirt or T-shirt. Also you are incorrectly answering many white pillow case. Please try to be precise.
+Below are the categories values for 5 out of 7 categories, try to answer within this values.
 
 "Type": [
     'shirt', 'sweater', 'blouse', 'blanket non-wool', 'pants', 'wrap', 'dress',
