@@ -26,7 +26,7 @@ class ClothingDescription:
                     ],
                 }
             ],
-            max_tokens=100,
+            max_tokens=250,
         )
 
         response_content = response.choices[0].message.content.strip('```json\n').strip('\n```')
